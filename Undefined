@@ -1,0 +1,5 @@
+❓ CHALLENGE
+
+const obj = { a: 1 };
+const { b } = obj;
+console.log(b);
