@@ -1,0 +1,11 @@
+
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(10), 500);
+});
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => reject('Error'), 1000);
+});
+
+Promise.allSettled([promise1, promise2])
+  .then(results => console.log(results))
+  .catch(error => console.error(error));
